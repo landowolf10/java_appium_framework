@@ -22,6 +22,16 @@ public class BasePage extends Config
         element.sendKeys(text);
     }
 
+    public boolean isVisible(By locatorType)
+    {
+        WebElement element = getElementBy(locatorType);
+
+        if (element != null)
+            return true;
+
+        return false;
+    }
+
     private WebElement waitUntilElementLocated(By locatorType)
     {
         return waitUntil(ExpectedConditions.visibilityOfElementLocated(locatorType), 10);

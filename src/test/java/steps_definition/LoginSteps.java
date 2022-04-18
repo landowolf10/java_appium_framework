@@ -8,11 +8,11 @@ public class LoginSteps
 {
     LoginPage login = new LoginPage();
 
-    /*@Given("App is open")
+    @Given("App is open")
     public void openApp()
     {
         login.setUp();
-    }*/
+    }
 
     @Then("Validate email textbox exists")
     public void validateElementExists()

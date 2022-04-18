@@ -6,12 +6,19 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage
 {
-    WebElement emailTxt = getElementBy(By.id("com.example.notesmvvm:id/etMail"));
+    /*** Locators ***/
+    By emailTextBox = By.id("com.example.notesmvvm:id/etMail");
+
+    /*** Elements ***/
+    WebElement emailTxt = getElementBy(emailTextBox);
     //WebElement emailTxt = setUp().findElement(By.id("com.example.notesmvvm:id/etMail"));
 
     public void validateLoginPage()
     {
         System.out.println("Application started");
+
+        if (isVisible(emailTextBox))
+            System.out.println("user is on login page");
 
         //WebElement element = preparation().findElement(By.xpath("//android.view.View/android.widget.EditText[1]"));
 
@@ -25,6 +32,6 @@ public class LoginPage extends BasePage
         //element.click();
         //preparation().getKeyboard().sendKeys("orlando.avilag@hotmail.com");
         //element.sendKeys("orlando.avilag@hotmail.com");
-        sendText(emailTxt, "Test");
+        //sendText(emailTxt, "Test");
     }
 }

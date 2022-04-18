@@ -13,7 +13,7 @@ public class Config extends DesiredCapabilities
 {
     protected RemoteWebDriver androidDriver;
 
-    protected RemoteWebDriver setUp() {
+    public RemoteWebDriver setUp() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "ZY327VC88R");
